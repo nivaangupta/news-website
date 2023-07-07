@@ -38,7 +38,7 @@ def display_news(ls, an):
             news_data.parse()
             news_data.nlp()
         except Exception as e:
-            streamlit.error(e)
+            print(e)
         with streamlit.expander(news.title.text):
             streamlit.markdown(
                 '''<h6 style="text-align: justify;">{}</h6>'''.format(news_data.summary),
